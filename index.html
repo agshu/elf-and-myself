@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="icon" type="image/ico" href="/images/favicon.ico" /> -->
+    <title>Elf & Myself</title>
+  </head>
+  <body>
+    <nav>
+      <img data-aos="fade-up" src="../images/header.png" class="header" /><img
+        class="arrow__header"
+        src="../images/arrow2.png"
+      />
+    </nav>
+
+    <div data-aos="fade-up" class="container__videos">
+      <div>
+        <h1 class="h1__homepage">Demo of project</h1>
+        <iframe
+          class="container__video"
+          src="https://player.vimeo.com/video/766418539?h=e3b9b28efa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="Making of Party Popper"
+        ></iframe>
+      </div>
+
+      <div>
+        <h1 class="h1__homepage">Making of project</h1>
+        <iframe
+          class="container__video"
+          src="https://player.vimeo.com/video/766153367?h=a8b6d8d49e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+          title="SEEDTRAILER.mp4"
+        ></iframe>
+      </div>
+    </div>
+    <div data-aos="fade-up" class="container__text">
+      <h1 class="h1__homepage">Goal and motivation of project</h1>
+      <div class="container__text--white">
+        Elf & Myself is a Christmas experience that bridges the gap between the
+        virtual- and outside world. A VR-user steps into a cozy christmas cabin
+        where they can decorate a tree, while an outside user takes the role of
+        an elf that peeks into the windows of the cabin and controls their point
+        of view through the gyroscope in a smartphone.
+        <br /><br />
+        One of the motivations behind Elf & Myself was that we wanted to close
+        the distance by breaking the wall between the VR-player and the
+        audience. VR is usually quite an isolated experience where interactions
+        with the outside world and observers is non-existent or restricted.
+        Instead of merely casting the HMD-users view to a public screen, we
+        wanted to provide the outside observer with a higher sense of immersion
+        by allowing them “peep” into the VR-world and control their point of
+        view through embodied interaction. The outside spectator’s position was
+        also visualized in the VR-space.
+        <br /><br />
+        Our goal was therefore to create a closer connection between the
+        audience and the player immersed in VR. Whilst doing this we wanted to
+        deepen our knowledge in graphics and interactions by exploring new
+        techniques and novel means of interaction. We also wanted to work with
+        lights and shadows to create a more realistic, immersive experience and
+        to create a cozy atmosphere in line with our Christmas theme. It was
+        created as a part of the course Advanced Graphics and Interaction in
+        just 4 weeks during the winter of 2022.
+      </div>
+    </div>
+    <div data-aos="fade-up" class="container__images">
+      <img class="container__images__image" src="/images/image.png" />
+      <img class="container__images__image" src="/images/image.png" />
+      <img class="container__images__image" src="/images/image.png" />
+    </div>
+    <div data-aos="fade-up" class="container__text">
+      <h1 class="h1__homepage">
+        Graphics and interaction technologies used and developed
+      </h1>
+      <div data-aos="fade-in" class="container__text--white">
+        Skriv någon om vad vi använde för gratis modell för VR spelaren NormCore
+        plug-in - varför osv.
+        <br /><br />
+        All models were created using Blender, additionally some procedural
+        textures were developed, such as the gingerbread-cookie and the
+        fireplace stone. In order to export and import the procedural textures
+        from Blender to Unity, the objects were UV unwrapped and the textures
+        baked into images, a diffuse map for color information and a normal map.
+        These were then applied to the imported model in Unity. This not only
+        enabled us to use the procedural textures created in Blender, but can
+        also save render time.
+      </div>
+    </div>
+    <div data-aos="fade-up" class="container__images">
+      <img class="container__images__tester" src="./images/testing.png" />
+      <img class="container__images__tester" src="./images/user.png" />
+      <img class="container__images__tester" src="./images/tablet.png" />
+    </div>
+    <div data-aos="fade-up" class="container__text">
+      <h1 class="h1__homepage">Challenges & Obstacles</h1>
+      <div class="container__text--white">
+        In order to break down the wall between the HMD user and the outside
+        spectator we deemed it critical to create realistic avatars representing
+        both users. We decided to use the Oculus Quest 2 since we are familiar
+        with it and due to the mobility afforded by it being able to run it
+        cordless. However, that also meant we only had three points of tracking
+        which was a big challenge when creating the representation of the
+        VR-player. It is evident that it is very challenging, if not impossible,
+        to create fully realistic human movement based on only three points of
+        tracking. With regards to the outside spectator we only had one
+        dimension of tracking - the rotation, so it was also a big challenge to
+        represent that user in VR.
+        <br /><br />
+        Due to the time restriction of this project, it was also a challenge to
+        prioritize the work and still explore advanced and, to us, novel
+        graphics and interaction techniques. Based on previous experience, we
+        knew that when working with the Oculus Quest 2, another big challenge is
+        to balance graphics and performance.
+        <br /><br />
+        The biggest obstacle was the restricted time we had to develop this
+        project, 4 weeks. As mentioned, we had to prioritize our work. The end
+        product has managed to achieve what we set out to do, that is to narrow
+        the bridge between the virtual- and outside-world using embodied
+        interaction. However, it would have benefited from more throughout user
+        testing since it does contain some bugs and is somewhat unreliable.
+        Another obstacle was that all of us advanced our Blender skills out of
+        interest and therefore wanted to add more things into the scene which
+        was troubling for the headsets performance. When putting everything
+        together, things had to be recreated into more low poly versions in
+        order to work together.
+      </div>
+    </div>
+    <div data-aos="fade-up" class="container__text">
+      <h1 class="h1__homepage">Lessons learned</h1>
+      <div class="container__text--white">
+        For this project, we really had to adapt to the limitations of the
+        Oculus Quest 2 graphic constraints, and learned how we could lower the
+        resolution of our 3d models to work around this. For example, the
+        surrounding trees initially had snow on them but each tree was then made
+        up of 33 thousand vertices. When replacing the snow by just adding white
+        cones and adding a decimate modifier reduced the number of vertices to
+        ≈250. This taught us of the importance of always testing our stuff in
+        the final environment it is intended for, which in this case was VR.
+        <br /><br />We also learned how to bake textures in Blender. Although it
+        is quite a time consuming and unintuitive process, it enabled us to use
+        the procedural textures created in Blender. This also didn’t affect the
+        performance of the headset as much as other graphics.<br /><br />To
+        allow the outside observer to control their point of view on a fixed
+        screen through embodied interaction, we used the gyroscope sensor in a
+        smartphone. We tried making this compatible for both iPhone and Android,
+        but struggled with Apple’s security measures and decided to only
+        implement it for Android. Using the Unity Remote 5 app we learned how to
+        connect the phone to the Unity Editor on the computer and access the
+        gyroscope data. We then calibrated the data to make sense in relation to
+        the phone's rotation and the rotation of the camera in the VR scene. The
+        resulting rotational values were not only applied to control the camera
+        in the scene but also used to transform the rotation of the Elf’s head.
+      </div>
+    </div>
+    <div data-aos="fade-up" class="container__related-work">
+      <h1 class="h1__homepage">Related work</h1>
+      <div class="container__related">
+        <div class="container__text--green">
+          <h3>
+            TeleSight: enabling asymmetric collaboration in VR between HMD user
+            and Non-HMD users
+          </h3>
+          <h3 class="container__h3">
+            Taichi Furukawa, Daisuke Yamamoto, Moe Sugawa, Roshan Peiris, Kouta
+            Minamizawa. 2019.
+          </h3>
+          <div>Lägga in</div>
+        </div>
+        <div class="container__text--green">
+          <h3>
+            Am I a Bunny?: The Impact of High and Low Immersion Platforms and
+            Viewers' Perceptions of Role on Presence, Narrative Engagement, and
+            Empathy during an Animated 360° Video
+          </h3>
+          <h3 class="container__h3">
+            Samantha W. Bindman, Lisa M. Castaneda, Mike Scanlon, and Anna
+            Cechony. 2018.
+          </h3>
+          <div>
+            This paper explored the sense of presence and understanding of ones
+            narrative role in a virtual environment in relation to the level of
+            immersion of the platform used. Participants reactions where
+            compared between a low-level immersion platform (viewing a 360 video
+            on a smartphone) and a high-level immersion platform (a HMD). The
+            findings of the study suggest that while a high-level immersion
+            platform can easily increase the user’s sense of presence in a
+            virtual environment, it is not significantly related to user’s
+            narrative engagement and empathy towards the environment and story.
+            Here, the more important aspect was to convey the user’s role in
+            terms of being just an observer or if they experienced themselves to
+            be an active character in the scene.
+            <br /><br />
+            This can be connected to out project, as we wanted to establish
+            immersion for both a non-HMD user and a HMD-user. The study suggests
+            that it is possible to immerse a non-HMD user in a virtual
+            environment as long as their role is conveyed clearly to them. This
+            is what we aimed to accomplish.
+          </div>
+        </div>
+        <div class="container__text--green">
+          <h3>
+            Spectator View: Enabling Asymmetric Interaction between HMD Wearers
+            and Spectators with a Large Display
+          </h3>
+          <h3 class="container__h3">
+            Finn Welsford-Ackroyd, Andrew Chalmers, Rafael Kuffner dos Anjos,
+            Daniel Medeiros, Hyejin Kim, and Taehyun Rhee. 2021.
+          </h3>
+          <div>
+            This study connected a HMD-user with a non-HMD user through a large
+            display, aiding collaboration between the person in the virtual
+            environment and the spectator. The spectator had a camera view
+            separate from that of the HMD-user, which they were free to control
+            the orientation of. Some elements to support collaboration where
+            also included in the setup, like an ability for the spectator to
+            point to different parts of the VR scene which the HMD-user was made
+            aware of.
+            <br /><br />Although our project does not focus on collaboration per
+            se, the connection between a spectator and a HMD-user is still
+            something we can draw inspiration from. We thus wanted to give the
+            person outside of VR some level of control of their camera view, as
+            well as separating it from the view of the HMD-user. We also wanted
+            to implement a spectator screen like the one in this study, as
+            opposed to for example only viewing the scene from a smartphone,
+            since the screen approach was more related to the window metaphor
+            that we wanted to convey.
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 data-aos="fade-up" class="about__h1">The Team</h1>
+    <section data-aos="fade-up" class="about">
+      <div class="about__person">
+        <img src="/images/agnes.png" class="about__person__image" />
+        <h2>Agnes Shutrick</h2>
+        <h3>agnesben@kth.se</h3>
+        <div class="about__person__text">
+          VR avatar and tracking; candy cane ornament, table, carpet and
+          christmas tree models; VR player interactions
+        </div>
+      </div>
+      <div class="about__person">
+        <img src="/images/maria.png" class="about__person__image" />
+        <h2>Maria Jacobson</h2>
+        <h3>majacobs@kth.se</h3>
+        <div class="about__person__text">Elf model; bell ornament</div>
+      </div>
+      <div class="about__person">
+        <img src="/images/ebba.png" class="about__person__image" />
+        <h2>Ebba Rovig</h2>
+        <h3>rovig@kth.se</h3>
+        <div class="about__person__text">
+          Cabin and outside environment, fireplace, stockings models, initial
+          connection and reading of gyroscope data from phone to Unity
+        </div>
+      </div>
+      <div class="about__person">
+        <img src="/images/erik.png" class="about__person__image" />
+        <h2>Erik Meurk</h2>
+        <h3>emeurk@kth.se</h3>
+        <div class="about__person__text">
+          Implemented multiplayer; VR player interactions; VR avatar tracking;
+        </div>
+      </div>
+      <div class="about__person">
+        <img src="/images/amanda.png" class="about__person__image" />
+        <h2>Amanda Lindqvist</h2>
+        <h3>amlindqv@kth.se</h3>
+        <div class="about__person__text">
+          Implementation and calibration of rotation of Elf i.e., the non-HMD
+          user; gingerbread-ornament, candelabra, and chair models.
+        </div>
+      </div>
+    </section>
+    <footer>&copy; Copyright 2022 Elf&Myself</footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
