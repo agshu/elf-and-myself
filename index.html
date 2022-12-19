@@ -247,6 +247,9 @@
         </div>
       </div>
     </div>
+    <button class="scroll__btn" id="top-button">
+      <img class="scroll__btn__image" src="./images/arrow2.png" />
+    </button>
     <h1 data-aos="fade-up" class="about__h1">The Team</h1>
     <section data-aos="fade-up" class="about">
       <div class="about__person">
@@ -295,6 +298,29 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      document
+        .getElementById("top-button")
+        .addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+        });
+
+      window.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+        if (scrollPercentage > 0.1) {
+          document.querySelector(".scroll__btn").style.display = "block";
+        } else {
+          document.querySelector(".scroll__btn").style.display = "none";
+        }
+      });
     </script>
   </body>
 </html>
