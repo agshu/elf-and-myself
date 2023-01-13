@@ -33,7 +33,7 @@
         <h1 class="h1__homepage">Demo of project</h1>
         <iframe
           class="container__video"
-          src="https://player.vimeo.com/video/766418539?h=e3b9b28efa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          src="https://player.vimeo.com/video/783008193?h=bf87c7d5fd"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen
@@ -92,8 +92,33 @@
         Graphics and interaction technologies used and developed
       </h1>
       <div data-aos="fade-in" class="container__text--white">
-        Skriv någon om vad vi använde för gratis modell för VR spelaren NormCore
-        plug-in - varför osv.
+        The software Ready Player Me offers customizable 3D avatars created for
+        VR experiences (especially the Metaverse). The avatar was imported using
+        the Ready Player Me SDK and acts like a normal 3D asset in Unity. For
+        the skeletal movement of the avatar, the Animation Rigging package was
+        used. Animation rigging was used to define the bone structure of the
+        character and assigning skin weights to the mesh, which determines how
+        the vertices of the mesh are deformed when the bones move. Once the
+        character was rigged, it could be animated by moving the bones in the
+        hierarchy, which will cause the mesh to deform and create movements. For
+        us, the movements of the avatar were based on the hands and head
+        movements of the player connected with the Oculus VR kit. Using the
+        avatar from Ready Player Me allowed us to spend less time on advanced
+        skeleton modeling in Blender and more time on other graphics and
+        interactions that were crucial for the experience.
+        <br /><br />
+        To synchronize Elf & Myself between the VR-player and the audience, we
+        first wanted to videostream an in-game camera from Unity that the
+        audience could see. The problem was that we had to stream from the
+        built-in app in the Oculus Quest 2 headset. This showed to be tricky, as
+        there were no current solutions to stream an in-game camera from an
+        Android build, only from PC. Instead, we used NormCore to keep the state
+        of all clients the same. Normcore is a networking plugin and hosting
+        service created by Normal and is built to enable multiplayer gameplay in
+        a quick and efficient way. Using NormCore, we could use different
+        scripts and solutions to send data about different objects' orientation
+        in space to keep everything up to date, showing the same gameplay on
+        both the audience and VR-player view.
         <br /><br />
         All models were created using Blender, additionally some procedural
         textures were developed, such as the gingerbread-cookie and the
@@ -103,6 +128,10 @@
         These were then applied to the imported model in Unity. This not only
         enabled us to use the procedural textures created in Blender, but can
         also save render time.
+        <br /><br />
+        We did use some external resources. The crackling noise of the fireplace
+        is from freesound.org. The avatar is from Ready Player Me, which is a
+        Metaverse avatar creator.
       </div>
     </div>
     <div data-aos="fade-up" class="container__images">
@@ -153,13 +182,32 @@
         surrounding trees initially had snow on them but each tree was then made
         up of 33 thousand vertices. When replacing the snow by just adding white
         cones and adding a decimate modifier reduced the number of vertices to
-        ≈250. This taught us of the importance of always testing our stuff in
-        the final environment it is intended for, which in this case was VR.
-        <br /><br />We also learned how to bake textures in Blender. Although it
-        is quite a time consuming and unintuitive process, it enabled us to use
-        the procedural textures created in Blender. This also didn’t affect the
-        performance of the headset as much as other graphics.<br /><br />To
-        allow the outside observer to control their point of view on a fixed
+        ≈250. Also, we used baked lightning and used low resolution shadows in
+        order for the game to run smoothly. This taught us of the importance of
+        always testing our stuff in the final environment it is intended for,
+        which in this case was VR, so you don’t fumble in the dark with how the
+        meshes and textures you’ve created might impact the performance.
+        Additionally, we learnt the importance of being careful with scripts.
+        One script that we had caused a major performance issue as an if
+        statement was checked indefinitely. When that was fixed, the performance
+        increased tremendously, so we will be more careful about how we code our
+        scripts in the future.
+
+        <br /><br />
+        We also learned how to bake textures in Blender. Although it is quite a
+        time consuming and unintuitive process, it enabled us to use the
+        procedural textures created in Blender. This also didn’t affect the
+        performance of the headset as much as other graphics.
+        <br /><br />
+        As it was everyone’s first time making a multiplayer game, we learnt how
+        tricky it could be to synchronize all the objects between the clients.
+        If two clients were interacting with an object at the same time, they
+        interfered with each other and a lot of bugs started to show. We managed
+        to solve the synchronization issues by having the clients claim
+        ownership of an object when interacted with, and that way two clients
+        couldn’t interact with an object at the same time.
+        <br /><br />
+        To allow the outside observer to control their point of view on a fixed
         screen through embodied interaction, we used the gyroscope sensor in a
         smartphone. We tried making this compatible for both iPhone and Android,
         but struggled with Apple’s security measures and decided to only
@@ -169,6 +217,13 @@
         the phone's rotation and the rotation of the camera in the VR scene. The
         resulting rotational values were not only applied to control the camera
         in the scene but also used to transform the rotation of the Elf’s head.
+        <br /><br />
+        Finally, we realized how difficult it can be to rig an avatar in VR. As
+        you only have the headset and the two controllers, it makes it hard and
+        essentially impossible to mimic the movement of arms and legs in VR. We
+        understood why many games have chosen to hide the legs of avatars, and
+        to not let the player themselves see their own arms. It will be
+        interesting to see how this problem will be solved in the future.
       </div>
     </div>
     <div data-aos="fade-up" class="container__related-work">
@@ -183,7 +238,20 @@
             Taichi Furukawa, Daisuke Yamamoto, Moe Sugawa, Roshan Peiris, Kouta
             Minamizawa. 2019.
           </h3>
-          <div>Lägga in</div>
+          <div>
+            This paper proposed a concept for breaking the wall between
+            HMD-users and non-HMD users by introducing a physical interaction
+            layer in the form of an avatar robot that mimics the motions of the
+            HMD user. The non-HMD user can interact with the HMD-user by
+            interaction with the robot, e.g. cover the eyes of the robot and
+            obscure the view of the HMD-user. Additionally, there is a visual
+            layer in the form of a projection of the VR-space to provide outside
+            spectators with a view of the VR-environment. This was relevant for
+            our project since our aim was also to immerse the non-HMD user in
+            the VR-space through embodied interaction. In our case, the embodied
+            interaction through physical movement will control the non-HMD
+            user's field of view.
+          </div>
         </div>
         <div class="container__text--green">
           <h3>
@@ -207,7 +275,7 @@
             narrative engagement and empathy towards the environment and story.
             Here, the more important aspect was to convey the user’s role in
             terms of being just an observer or if they experienced themselves to
-            be an active character in the scene.
+            be an active character in the scene
             <br /><br />
             This can be connected to out project, as we wanted to establish
             immersion for both a non-HMD user and a HMD-user. The study suggests
